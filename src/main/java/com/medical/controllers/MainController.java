@@ -32,19 +32,19 @@ public class MainController {
 	{
 		Doctor d1 = new Doctor();
 		d1.setName("Suchetan Chanda");
-		d1.setEmail("xxx@gmail.com");
+		d1.setEmail("asfs@gmail.com");
 		
 		Patient p1 = new Patient();
 		p1.setName("yyy");
-		p1.setEmail("yyy@gmail.com");
+		p1.setEmail("dggs@gmail.com");
 		
 		Appointment a1 = new Appointment();
 		a1.setDoctor(d1);
 		a1.setPatient(p1);
 		
-		dRepo.save(d1);
-		pRepo.save(p1);
-		appRepo.save(a1);
+//		dRepo.save(d1);
+//		pRepo.save(p1);
+//		appRepo.save(a1);
 		return "home";
 	}
 }
