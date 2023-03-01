@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link th:href="@{/css/styles.css}" rel="stylesheet">
+<link th:href="@{/css/navbar.css}" rel="stylesheet">
+<link th:href="@{/css/login.css}" rel="stylesheet">
+
+</head>
+<body>
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> 4Med. </a>
+
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/signup">Signup</a>
+        <a href="/login">Login</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+<div class="container">
+        <div class="login">
+            <form>
+                <h1>Login</h1>
+                <hr>
+                <p>Explore the World!</p>
+                <label>Email</label>
+                <input type="text" placeholder="abc@exampl.com">
+                <label>Password</label>
+                <input type="password" placeholder="enter your password!">
+                <button>Submit</button>
+                <p>
+                    <a href="#">Dont have account Register?</a>
+                </p>
+            <closeform></closeform></form>
+        </div>
+        <div class="pic">
+            <img th:src="@{../img/doctor_consultation_02.jpg}">
+        </div>
+    </div>
+	
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link th:href="@{/css/admin/styles.css}" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>HealthBridge</title>
+  </head>
+  <body >
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <i class='bx bx-plus-medical'></i>
+        <span class="text">HealthBridge</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="active">
+          <a href="#main">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#Analytics">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="text">Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="#Appointment">
+            <i class="bx bxs-shopping-bag-alt"></i>
+            <span class="text">My Appointments</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="#Schedule">
+            <i class="bx bxs-message-dots"></i>
+            <span class="text">Schedule</span>
+          </a>
+        </li>
+        
+      </ul>
+      <ul class="side-menu">
+       <li>
+         <a href="#" >
+            <i class="bx bxs-cloud-download"></i>
+            <span class="text">Download Report</span>
+          </a>
+       </li>
+        
+        <li>
+          <a href="#" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+      
+        <input type="checkbox" id="switch-mode" hidden />
+        <label for="switch-mode" class="switch-mode"></label>
+        <a href="#" class="profile">
+          <img src="img/people.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main id="main">
+        <div class="head-title">
+          <div class="left">
+            <h1 id="name">Welcome <span>doctor name</span></h1>
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Home</a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="btn-download">
+            <i class="bx bxs-cloud-download"></i>
+            <span class="text">Download PDF</span>
+          </a>
+        </div>
+
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3>1020</h3>
+              <p>New Order</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-group"></i>
+            <span class="text">
+              <h3>2834</h3>
+              <p>Visitors</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-dollar-circle"></i>
+            <span class="text">
+              <h3>$2543</h3>
+              <p>Total Sales</p>
+            </span>
+          </li>
+        </ul>
+
+        <div class="table-data">
+          <div class="order" id="Appointment">
+            <div class="head">
+              <h3>Your Appointments</h3>
+              <i class="bx bx-search"></i>
+              <i class="bx bx-filter"></i>
+            </div>
+            <!-- <div class="table"> -->
+            <table >
+              <thead>
+                <tr>
+                  <th>Pateint Name</th>
+                  <th>Date</th>
+                  <th>Symptoms</th>
+                  <th>Status</th>
+                  <th>view</th>
+                </tr>
+              </thead>
+              
+              <tbody >
+                <tr>
+                  <td>
+                    <img src="img/people.png" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2021</td>
+                  <td>headAche</td>
+                  <td><span class="status completed">Completed</span></td>
+                  <td>
+                    <button class="status completed">
+                      <i class="bx bx-show"></i>
+                    </button>
+                    <button class="status pending">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="img/people.png" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2021</td>
+                  <td>headAche</td>
+                  <td><span class="status pending">Pending</span></td>
+
+                  <td>
+                    <button class="status completed">
+                      <i class="bx bx-show"></i>
+                    </button>
+                    <button class="status pending">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="img/people.png" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2021</td>
+                  <td>headAche</td>
+                  <td><span class="status process">Process</span></td>
+
+                  <td>
+                    <button class="status completed">
+                      <i class="bx bx-show"></i>
+                    </button>
+                    <button class="status pending">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="img/people.png" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2021</td>
+                  <td>headAche</td>
+                  <td><span class="status pending">Pending</span></td>
+
+                  <td>
+                    <button class="status completed" onclick="openForm()">
+                      <i class="bx bx-show"></i>
+                    </button>
+                    <button class="status pending">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+
+
+                   <tr>
+                  <td>
+                    <img src="img/people.png" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2021</td>
+                  <td>headAche</td>
+                  <td><span class="status pending">Pending</span></td>
+
+                  <td>
+                    <button class="status completed" onclick="openForm()">
+                      <i class="bx bx-show"></i>
+                    </button>
+                    <button class="status pending">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+
+
+                   <tr>
+                  <td>
+                    <img src="img/people.png" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2021</td>
+                  <td>headAche</td>
+                  <td><span class="status pending">Pending</span></td>
+
+                  <td>
+                    <button class="status completed" onclick="openForm()">
+                      <i class="bx bx-show"></i>
+                    </button>
+                    <button class="status pending">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="img/people.png" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2021</td>
+                  <td>headAche</td>
+                  <td><span class="status completed">Completed</span></td>
+
+                  <td>
+                    <button class="status completed">
+                      <i class="bx bx-show"></i>
+                    </button>
+                    <button class="status pending">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="todo" id="Schedule" onclick="closeForm()">
+            <div class="head">
+              <h3>Today's Schedule</h3>
+              <i class="bx bx-plus"></i>
+              <i class="bx bx-filter"></i>
+            </div>
+            <ul class="todo-list">
+              <li class="completed">
+                <i class="bx bx-time"></i>
+                <p>Schedule start</p>
+                <p>9:00 am</p>
+              </li>
+              <li class="completed">
+                <i class="bx bx-task"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+               <li class="completed">
+                <i class="bx bxs-calendar-check"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+               <li class="completed">
+                <i class="bx bx-task"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+               <li class="completed">
+                <i class="bx bx-task"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+               <li class="completed">
+                <i class="bx bx-task"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+               <li class="completed">
+                <i class="bx bx-task"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+               <li class="completed">
+                <i class="bx bx-task"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+
+              <li class="not-completed">
+                <i class="bx bx-task"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+              <li class="completed">
+                <i class="bx bx-task"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+              <li class="not-completed">
+                <i class="bx bx-task"></i>
+                <p>Appointment</p>
+                <p>9:00 am</p>
+              </li>
+              <li class="completed">
+                <i class="bx bx-time-five"></i>
+                <p>Schedule end</p>
+                <p>5:00 pm</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- togle form -->
+        <div class="form-popup" id="myForm">
+        <div class="form-container">
+        <div class="login">
+            	<form>
+		<label for="patientName">Patient Name:</label>
+		<input type="text" id="patientName" name="patientName"><br><br>
+
+		<label for="doctorName">Doctor Name:</label>
+		<input type="text" id="doctorName" name="doctorName"><br><br>
+
+		<label for="medication">Medication:</label>
+		<textarea id="medication" name="medication"></textarea><br><br>
+
+		<label for="dosage">Dosage:</label>
+		<input type="text" id="dosage" name="dosage"><br><br>
+
+		<label for="frequency">Frequency:</label>
+		<input type="text" id="frequency" name="frequency"><br><br>
+
+		<label for="duration">Duration:</label>
+		<input type="text" id="duration" name="duration"><br><br>
+
+		<label for="notes">Notes:</label>
+		<textarea id="notes" name="notes"></textarea><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+             <button>cancel</button>
+        </div>
+        <div class="pic">
+            <img src="/adminhub-master/img/doctor_consultation_02.jpg">
+        </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+    <script th:src="@{/js/admin/script.js}"></script>
+  </body>
+</html>
